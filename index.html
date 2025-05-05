@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Graphic & Video Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Clip<span>Cult</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="service.html" target="_blank">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bringing Ideas to Life Through Design</h1>
+                <p>Professional graphic design and video editing services for brands that want to stand out</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Design workspace">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Video Editing</h3>
+                    <p>Professional editing for promotional videos, brand stories, and social media content.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ad"></i>
+                    <h3>Reels Making and Youtube Shorts</h3>
+                    <p>We create engaging reels and YouTube Shorts tailored to your brand.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic Design</h3>
+                    <p>We create banners, posters, flyers, brochures, and more.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Brand Promotion</h3>
+                    <p>We create brand promotional videos featuring our employees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="promotional">Promotional Videos</button>
+                <button class="filter-btn" data-filter="brand">Brand Videos</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Video Portfolio Items -->
+                <div class="portfolio-item" data-category="promotional">
+                    <div class="video-container">
+                        <video src="vid/vd5.mp4" width="500" height="200" controls ></video>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tech Startup Promo</h3>
+                        <p>Promotional video for a new tech product launch</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="brand">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fashion Brand Story</h3>
+                        <p>Brand identity video for a luxury fashion label</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="promotional">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/J---aiyznGQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Restaurant Commercial</h3>
+                        <p>30-second spot for a local restaurant chain</p>
+                    </div>
+                </div>
+                
+                <!-- Graphic Design Portfolio Items -->
+                <div class="portfolio-item" data-category="graphic">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Brand Identity Design">
+                    <div class="portfolio-info">
+                        <h3>Brand Identity</h3>
+                        <p>Complete branding package for a health food company</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="graphic">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Social Media Graphics">
+                    <div class="portfolio-info">
+                        <h3>Social Media Series</h3>
+                        <p>Monthly content package for a fitness influencer</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="brand">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/L_jWHffIx5E" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Profile</h3>
+                        <p>Company overview video for a financial services firm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="vid/e2.jpg">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p>With over 5 years of experience in graphic design and video production, I specialize in creating visually compelling content that tells your brand's story effectively.</p>
+                <p>My approach combines technical expertise with creative vision to deliver designs that are not only beautiful but also strategically aligned with your business goals.</p>
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <div class="skill-tags">
+                        <span>Adobe Premiere Pro</span>
+                        <span>After Effects</span>
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                        <span>Cinema 4D</span>
+                        <span>Branding</span>
+                        <span>Motion Graphics</span>
+                        <span>Color Grading</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"The promotional video created for our product launch exceeded all expectations. It perfectly captured our brand essence and helped us achieve record sales."</p>
+                    <div class="client-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Marketing Director, TechCorp</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Working with this designer was a game-changer for our brand. The visual identity they created has become instantly recognizable in our industry."</p>
+                    <div class="client-info">
+                        <h4>Michael Chen</h4>
+                        <p>CEO, FreshBites</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"The social media graphics package delivered consistent, high-quality content that significantly increased our engagement rates."</p>
+                    <div class="client-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Social Media Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+<!-- Add this anywhere you want a compact venture display -->
+<section class="compact-ventures">
+    <div class="container">
+        <h3 class="subsection-title">Our Other Ventures</h3>
+        <div class="compact-slider">
+            <!-- Venture 1 -->
+            <div class="compact-slide active">
+                <div class="compact-card">
+                    <div class="card-header">
+                        <img src="assets/icons/motioncraft-icon.svg" alt="MotionCraft Icon">
+                        <h4>MotionCraft</h4>
+                    </div>
+                    <p>Cinematic motion graphics and animations</p>
+                    <a href="#" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    <div class="card-highlight"></div>
+                </div>
+            </div>
+
+            <!-- Venture 2 -->
+            <div class="compact-slide">
+                <div class="compact-card">
+                    <div class="card-header">
+                        <img src="assets/icons/reelfactory-icon.svg" alt="ReelFactory Icon">
+                        <h4>ReelFactory</h4>
+                    </div>
+                    <p>Viral Instagram Reel production</p>
+                    <a href="#" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    <div class="card-highlight"></div>
+                </div>
+            </div>
+
+            <!-- Venture 3 -->
+            <div class="compact-slide">
+                <div class="compact-card">
+                    <div class="card-header">
+                        <img src="assets/icons/brandvfx-icon.svg" alt="BrandVFX Icon">
+                        <h4>BrandVFX</h4>
+                    </div>
+                    <p>Visual effects for brands</p>
+                    <a href="#" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    <div class="card-highlight"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>Have a project in mind or want to discuss how I can help your brand? Reach out through any of these channels:</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@designstudio.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Creative District, Design City</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-vimeo"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Design<span>Studio</span></a>
+                    <p>Creating visual stories that inspire and engage.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Video Editing</a></li>
+                        <li><a href="#">Motion Graphics</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for design tips and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DesignStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

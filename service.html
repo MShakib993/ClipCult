@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing Services | Professional Reels & Promotional Videos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #6c63ff;
+            --primary-dark: #4d44db;
+            --secondary: #ff6584;
+            --dark: #2a2a72;
+            --light: #f8f9fa;
+            --text: #333;
+            --text-light: #777;
+            --white: #fff;
+            --black: #000;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            font-size: 2.5rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            margin: 5px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .services-hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            padding: 180px 0 80px;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-card-img img {
+            transform: scale(1.05);
+        }
+
+        .service-card-content {
+            padding: 30px;
+        }
+
+        .service-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .service-card-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            margin-top: 20px;
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            list-style: none;
+        }
+
+        .service-features li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Process Section */
+        .process {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .process-step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .process-step p {
+            color: var(--text-light);
+        }
+
+        /* Pricing Section */
+        .pricing-plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            padding: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: var(--text-light);
+        }
+
+        .pricing-features {
+            padding: 30px;
+        }
+
+        .pricing-features ul {
+            list-style: none;
+        }
+
+        .pricing-features li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .pricing-features li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .pricing-features li.disabled:before {
+            content: '\f00d';
+            color: #ccc;
+        }
+
+        .pricing-footer {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cta .btn:hover {
+            background: var(--light);
+            color: var(--primary-dark);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .footer-contact h3,
+        .footer-links h3,
+        .footer-services h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-contact h3::after,
+        .footer-links h3::after,
+        .footer-services h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .footer-links ul,
+        .footer-services ul {
+            list-style: none;
+        }
+
+        .footer-links li,
+        .footer-services li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a,
+        .footer-services a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-hero {
+                padding: 150px 0 60px;
+            }
+
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-hero p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .process-step {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Video<span>Edit</span></a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Premium Video Editing Services</h1>
+            <p>I transform your raw footage into engaging, platform-optimized content that captures attention and delivers results. Whether you need scroll-stopping reels or professional promotional videos, I've got you covered.</p>
+            <a href="#contact" class="btn">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="container">
+        <h2 class="section-title">My Services</h2>
+        
+        <div class="services-grid">
+            <!-- Instagram Reels Service -->
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Instagram Reels">
+                </div>
+                <div class="service-card-content">
+                    <h3>Instagram Reels Creation</h3>
+                    <p>Eye-catching, trend-driven reels designed to maximize engagement and grow your audience.</p>
+                    
+                    <ul class="service-features">
+                        <li>60-second optimized reels</li>
+                        <li>Trend research & implementation</li>
+                        <li>Captions & subtitles included</li>
+                        <li>Hashtag strategy</li>
+                        <li>1-2 day turnaround</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Promotional Videos Service -->
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Promotional Videos">
+                </div>
+                <div class="service-card-content">
+                    <h3>Promotional Videos</h3>
+                    <p>Professional videos that showcase your product, service, or brand story effectively.</p>
+                    
+                    <ul class="service-features">
+                        <li>30-90 second promotional videos</li>
+                        <li>Script assistance available</li>
+                        <li>Motion graphics & text animations</li>
+                        <li>Music & sound effects</li>
+                        <li>Multiple revisions included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Content Package -->
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="https://images.unsplash.com/photo-1611162616475-465b2137c8d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Social Media Content">
+                </div>
+                <div class="service-card-content">
+                    <h3>Social Media Content Packages</h3>
+                    <p>Consistent, high-quality content tailored to your brand's social media needs.</p>
+                    
+                    <ul class="service-features">
+                        <li>Weekly/Monthly content packages</li>
+                        <li>Mix of reels, stories, and posts</li>
+                        <li>Brand-consistent aesthetics</li>
+                        <li>Content calendar planning</li>
+                        <li>Platform optimization (IG, TikTok, FB)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">My Creative Process</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We discuss your vision, goals, and brand identity to create content that truly represents you.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>Content Strategy</h3>
+                    <p>I analyze your target audience and platform requirements to develop an effective approach.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>Editing Magic</h3>
+                    <p>Your footage gets transformed with professional editing, effects, and pacing for maximum impact.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3>Delivery & Feedback</h3>
+                    <p>You receive the final product with options for revisions to ensure complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="container">
+        <h2 class="section-title">Simple Pricing</h2>
+        
+        <div class="pricing-plans">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter Package</h3>
+                    <div class="price">$99<span>/video</span></div>
+                    <p>Perfect for individuals and small businesses</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>1-2 minute edited video</li>
+                        <li>Basic transitions & effects</li>
+                        <li>Music & sound effects</li>
+                        <li>Subtitles included</li>
+                        <li>2 revisions</li>
+                        <li class="disabled">Motion graphics</li>
+                        <li class="disabled">Voiceover</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Popular Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Professional Package</h3>
+                    <div class="price">$199<span>/video</span></div>
+                    <p>Ideal for brands and serious content creators</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Up to 3-minute edited video</li>
+                        <li>Advanced transitions & effects</li>
+                        <li>Custom motion graphics</li>
+                        <li>Professional color grading</li>
+                        <li>3 revisions</li>
+                        <li>Basic voiceover</li>
+                        <li>Social media optimization</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Premium Package</h3>
+                    <div class="price">$349<span>/video</span></div>
+                    <p>For high-end promotional content</p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Up to 5-minute edited video</li>
+                        <li>Cinematic transitions & effects</li>
+                        <li>Advanced motion graphics</li>
+                        <li>Professional voiceover</li>
+                        <li>Unlimited revisions</li>
+                        <li>Script assistance</li>
+                        <li>Multi-platform versions</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="container">
+        <h2 class="section-title">Why Choose My Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-content">
+                    <h3><i class="fas fa-bolt" style="color: var(--primary); margin-right: 10px;"></i> Platform Expertise</h3>
+                    <p>I understand the specific requirements of Instagram, TikTok, and other platforms to create content that performs.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-content">
+                    <h3><i class="fas fa-tachometer-alt" style="color: var(--primary); margin-right: 10px;"></i> Fast Turnaround</h3>
+                    <p>Need content quickly? I offer expedited services without compromising quality.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-card-content">
+                    <h3><i class="fas fa-chart-line" style="color: var(--primary); margin-right: 10px;"></i> Results-Driven</h3>
+                    <p>My edits are designed not just to look good, but to drive engagement and conversions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready to Elevate Your Content?</h2>
+            <p>Let's create something amazing together. Get in touch to discuss your project and receive a free consultation.</p>
+            <a href="#contact" class="btn">Start Your Project Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Video<span>Edit</span></a>
+                    <p>Creating visual stories that inspire and engage.</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Creative St, Design City</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@videoedit.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#reels">Instagram Reels</a></li>
+                        <li><a href="services.html#promo">Promotional Videos</a></li>
+                        <li><a href="services.html#social">Social Media Content</a></li>
+                        <li><a href="services.html#brand">Brand Videos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VideoEdit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on Scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.service-card, .process-step, .pricing-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state
+            document.querySelectorAll('.service-card, .process-step, .pricing-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on page load
+        });
+    </script>
+</body>
+</html>
