@@ -6,7 +6,6 @@
     <title>Video Editing Services | Professional Reels & Promotional Videos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles */
         :root {
             --primary: #6c63ff;
             --primary-dark: #4d44db;
@@ -89,7 +88,6 @@
             border-radius: 2px;
         }
 
-        /* Header Styles */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -167,7 +165,6 @@
             transition: var(--transition);
         }
 
-        /* Hero Section */
         .services-hero {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             padding: 180px 0 80px;
@@ -186,7 +183,6 @@
             color: var(--text-light);
         }
 
-        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -258,7 +254,6 @@
             color: var(--primary);
         }
 
-        /* Process Section */
         .process {
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
         }
@@ -306,7 +301,6 @@
             color: var(--text-light);
         }
 
-        /* Pricing Section */
         .pricing-plans {
             display: flex;
             flex-wrap: wrap;
@@ -405,7 +399,6 @@
             text-align: center;
         }
 
-        /* CTA Section */
         .cta {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: var(--white);
@@ -436,7 +429,6 @@
             color: var(--primary-dark);
         }
 
-        /* Footer Styles */
         footer {
             background-color: var(--dark);
             color: var(--white);
@@ -558,7 +550,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
@@ -617,13 +608,70 @@
                 min-width: 100%;
             }
         }
+
+        .footer {
+  background-color: var(--dark);
+  color: white;
+  padding: 60px 0 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo .logo {
+  color: white;
+}
+
+.footer-logo .logo span {
+  color: var(--secondary);
+}
+
+.footer-logo p {
+  margin-top: 20px;
+  color: var(--light-gray);
+}
+
+.footer-links h3, .footer-services h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-links ul, .footer-services ul {
+  list-style: none;
+}
+
+.footer-links li, .footer-services li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .footer-services a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-services a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
     </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
     <header>
         <div class="container header-container">
-            <a href="index.html" class="logo">Video<span>Edit</span></a>
+            <a href="index.html" class="logo">Clip<span>Cult</span></a>
             
             <nav>
                 <ul class="nav-links">
@@ -643,7 +691,6 @@
         </div>
     </header>
 
-    <!-- Services Hero Section -->
     <section class="services-hero">
         <div class="container">
             <h1>Premium Video Editing Services</h1>
@@ -652,12 +699,10 @@
         </div>
     </section>
 
-    <!-- Main Services Section -->
     <section class="container">
         <h2 class="section-title">My Services</h2>
         
         <div class="services-grid">
-            <!-- Instagram Reels Service -->
             <div class="service-card">
                 <div class="service-card-img">
                     <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Instagram Reels">
@@ -676,7 +721,6 @@
                 </div>
             </div>
 
-            <!-- Promotional Videos Service -->
             <div class="service-card">
                 <div class="service-card-img">
                     <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Promotional Videos">
@@ -695,10 +739,9 @@
                 </div>
             </div>
 
-            <!-- Social Media Content Package -->
             <div class="service-card">
                 <div class="service-card-img">
-                    <img src="https://images.unsplash.com/photo-1611162616475-465b2137c8d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Social Media Content">
+                    <img src="img/video_editing.png" alt="Social Media Content">
                 </div>
                 <div class="service-card-content">
                     <h3>Social Media Content Packages</h3>
@@ -716,7 +759,6 @@
         </div>
     </section>
 
-    <!-- My Process Section -->
     <section class="process">
         <div class="container">
             <h2 class="section-title">My Creative Process</h2>
@@ -749,16 +791,14 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="container">
         <h2 class="section-title">Simple Pricing</h2>
         
         <div class="pricing-plans">
-            <!-- Basic Plan -->
             <div class="pricing-card">
                 <div class="pricing-header">
                     <h3>Starter Package</h3>
-                    <div class="price">$99<span>/video</span></div>
+                    <div class="price">499<span>/video</span></div>
                     <p>Perfect for individuals and small businesses</p>
                 </div>
                 <div class="pricing-features">
@@ -777,12 +817,11 @@
                 </div>
             </div>
             
-            <!-- Popular Plan -->
             <div class="pricing-card popular">
                 <div class="popular-badge">Most Popular</div>
                 <div class="pricing-header">
                     <h3>Professional Package</h3>
-                    <div class="price">$199<span>/video</span></div>
+                    <div class="price">799<span>/video</span></div>
                     <p>Ideal for brands and serious content creators</p>
                 </div>
                 <div class="pricing-features">
@@ -801,11 +840,10 @@
                 </div>
             </div>
             
-            <!-- Premium Plan -->
             <div class="pricing-card">
                 <div class="pricing-header">
                     <h3>Premium Package</h3>
-                    <div class="price">$349<span>/video</span></div>
+                    <div class="price">1199<span>/video</span></div>
                     <p>For high-end promotional content</p>
                 </div>
                 <div class="pricing-features">
@@ -826,107 +864,47 @@
         </div>
     </section>
 
-    <!-- Why Choose Me Section -->
-    <section class="container">
-        <h2 class="section-title">Why Choose My Services</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-card-content">
-                    <h3><i class="fas fa-bolt" style="color: var(--primary); margin-right: 10px;"></i> Platform Expertise</h3>
-                    <p>I understand the specific requirements of Instagram, TikTok, and other platforms to create content that performs.</p>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-card-content">
-                    <h3><i class="fas fa-tachometer-alt" style="color: var(--primary); margin-right: 10px;"></i> Fast Turnaround</h3>
-                    <p>Need content quickly? I offer expedited services without compromising quality.</p>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-card-content">
-                    <h3><i class="fas fa-chart-line" style="color: var(--primary); margin-right: 10px;"></i> Results-Driven</h3>
-                    <p>My edits are designed not just to look good, but to drive engagement and conversions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <footer class="footer">
         <div class="container">
-            <h2>Ready to Elevate Your Content?</h2>
-            <p>Let's create something amazing together. Get in touch to discuss your project and receive a free consultation.</p>
-            <a href="#contact" class="btn">Start Your Project Today</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
+            <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="index.html" class="logo">Video<span>Edit</span></a>
+                    <a href="#" class="logo">Clip<span>Cult</span></a>
                     <p>Creating visual stories that inspire and engage.</p>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
                 </div>
-                
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Creative St, Design City</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>contact@videoedit.com</span>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-services">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="services.html#reels">Instagram Reels</a></li>
-                        <li><a href="services.html#promo">Promotional Videos</a></li>
-                        <li><a href="services.html#social">Social Media Content</a></li>
-                        <li><a href="services.html#brand">Brand Videos</a></li>
+                        <li><a href="#">Video Editing</a></li>
+                        <li><a href="#">Reels Edit</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">9341837992</a></li>
+                        <li><a href="#">learnsphere152256@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2023 VideoEdit. All rights reserved.</p>
+                <p>&copy; 2025 ClipCult. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
@@ -935,13 +913,11 @@
             navLinks.classList.toggle('active');
         });
 
-        // Sticky Header on Scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             header.classList.toggle('scrolled', window.scrollY > 0);
         });
 
-        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -959,7 +935,6 @@
             });
         });
 
-        // Animation on Scroll
         document.addEventListener('DOMContentLoaded', function() {
             const animateOnScroll = () => {
                 const elements = document.querySelectorAll('.service-card, .process-step, .pricing-card');
@@ -975,7 +950,6 @@
                 });
             };
             
-            // Set initial state
             document.querySelectorAll('.service-card, .process-step, .pricing-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
@@ -983,7 +957,7 @@
             });
             
             window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Run once on page load
+            animateOnScroll();
         });
     </script>
 </body>
