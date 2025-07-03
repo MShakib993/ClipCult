@@ -3,40 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio | Graphic & Video Design</title>
+    <title>ClipCult | Creative Video & Design Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">ClipCult</div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Clip<span>Cult</span></a>
+            <a href="#" class="logo animate__animated animate__fadeIn">Clip<span>Cult</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="service.html" target="_blank">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="service.html" target="_blank" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
             </div>
         </div>
+        <div class="nav-highlight"></div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-particles" id="particles-js"></div>
         <div class="container">
-            <div class="hero-content">
-                <h1>Bringing Ideas to Life Through Design</h1>
-                <p>Professional graphic design and video editing services for brands that want to stand out</p>
-                <a href="#portfolio" class="btn">View My Work</a>
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="animate__animated animate__fadeInDown">Bringing Ideas to Life <span class="highlight-text">Through Design</span></h1>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Professional graphic design and video editing services for brands that want to stand out</p>
+                <a href="#portfolio" class="btn pulse-btn">View My Work <i class="fas fa-arrow-down"></i></a>
+                <div class="social-links animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="https://www.instagram.com/clipcult1/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a> -->
+                    <a href="https://www.linkedin.com/in/md-shakib-5a7964250/"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Design workspace">
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Design workspace">
+                    <div class="hero-image-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <div class="mouse">
+                <div class="scroller"></div>
             </div>
         </div>
     </section>
@@ -44,36 +70,61 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">My Services</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Services</h2>
+                <div class="section-subtitle">What I Offer</div>
+                <div class="section-divider"></div>
+            </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-film"></i>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                        <div class="icon-bg"></div>
+                    </div>
                     <h3>Video Editing</h3>
                     <p>Professional editing for promotional videos, brand stories, and social media content.</p>
+                    <div class="service-wave"></div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-ad"></i>
-                    <h3>Reels Making and Youtube Shorts</h3>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Reels & Shorts</h3>
                     <p>We create engaging reels and YouTube Shorts tailored to your brand.</p>
+                    <div class="service-wave"></div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="icon-bg"></div>
+                    </div>
                     <h3>Graphic Design</h3>
                     <p>We create banners, posters, flyers, brochures, and more.</p>
+                    <div class="service-wave"></div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-bullhorn"></i>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                        <div class="icon-bg"></div>
+                    </div>
                     <h3>Brand Promotion</h3>
                     <p>We create brand promotional videos featuring our employees.</p>
+                    <div class="service-wave"></div>
                 </div>
             </div>
         </div>
+        <div class="services-bg-shape"></div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">My Work</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Work</h2>
+                <div class="section-subtitle">Creative Showcase</div>
+                <div class="section-divider"></div>
+            </div>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="promotional">Promotional Videos</button>
@@ -82,58 +133,91 @@
             </div>
             <div class="portfolio-grid">
                 <!-- Video Portfolio Items -->
-                <div class="portfolio-item" data-category="promotional">
-                    <div class="video-container">
-                        <video src="vid/vd5.mp4" width="377" height="200" controls ></video>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Concert Promo</h3>
-                        <p>Promotional video for a upcoming Paradox Concert</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="brand">
-                    <div class="video-container">
-                         <video src="vid/vd1.mp4" width="377" height="200" controls ></video>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Anime Edit for Instagram Reel</h3>
-                        <p>Instagram Reel</p>
+                <div class="portfolio-item" data-category="promotional" data-aos="zoom-in">
+                    <div class="portfolio-item-inner">
+                        <div class="video-container">
+                            <video src="vid/vd5.mp4" width="377" height="200" controls></video>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Concert Promo</h3>
+                                <p>Promotional video for a upcoming Paradox Concert</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="promotional">
-                    <div class="video-container">
-                         <video src="vid/v3.mp4" width="377" height="200" controls ></video>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Upcoming Event Promo</h3>
-                        <p>Promotional video for a upcoming event</p>
+                <div class="portfolio-item" data-category="brand" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-item-inner">
+                        <div class="video-container">
+                            <video src="vid/vd1.mp4" width="377" height="200" controls></video>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Anime Edit for Instagram Reel</h3>
+                                <p>Instagram Reel</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+                <div class="portfolio-item" data-category="promotional" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-item-inner">
+                        <div class="video-container">
+                            <video src="vid/v3.mp4" width="377" height="200" controls></video>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Upcoming Event Promo</h3>
+                                <p>Promotional video for a upcoming event</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Graphic Design Portfolio Items -->
-                <div class="portfolio-item" data-category="graphic">
-                    <img src="img/1.jpeg" alt="Brand Identity Design">
-                    <div class="portfolio-info">
-                        <h3>Brand Identity</h3>
-                        <p>Watch Banner Promotion</p>
+                <div class="portfolio-item" data-category="graphic" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-item-inner">
+                        <img src="img/1.jpeg" alt="Brand Identity Design">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Brand Identity</h3>
+                                <p>Watch Banner Promotion</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="graphic">
-                    <img src="img/2.jpeg" alt="Social Media Graphics">
-                    <div class="portfolio-info">
-                        <h3>Social Media Series</h3>
-                        <p>Mamaearth Face wash</p>
+                <div class="portfolio-item" data-category="graphic" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-item-inner">
+                        <img src="img/2.jpeg" alt="Social Media Graphics">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Social Media Series</h3>
+                                <p>Mamaearth Face wash</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="brand">
-                    <div class="video-container">
-                         <video src="vid/vd3.mp4" width="377" height="200" controls ></video>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Anime Edit for Instagram Reel</h3>
-                        <p>Instagram Reel</p>
+                <div class="portfolio-item" data-category="brand" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="portfolio-item-inner">
+                        <div class="video-container">
+                            <video src="vid/vd3.mp4" width="377" height="200" controls></video>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Anime Edit for Instagram Reel</h3>
+                                <p>Instagram Reel</p>
+                                <a href="#" class="view-btn">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="portfolio-cta" data-aos="fade-up">
+                <p>Like what you see? Let's create something amazing together!</p>
+                <a href="#contact" class="btn btn-gradient">Start Your Project</a>
             </div>
         </div>
     </section>
@@ -141,185 +225,196 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-image">
-                <img src="vid/e2.jpg">
+            <div class="about-image" data-aos="fade-right">
+                <div class="image-frame">
+                    <img src="vid/e2.jpg" alt="About ClipCult">
+                    <div class="frame-decoration"></div>
+                </div>
+                <div class="shape-animation">
+                    <div class="shape shape1"></div>
+                    <div class="shape shape2"></div>
+                    <div class="shape shape3"></div>
+                </div>
             </div>
-            <div class="about-content">
-                <h2 class="section-title">About Me</h2>
+            <div class="about-content" data-aos="fade-left">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-subtitle">The Story Behind ClipCult</div>
+                    <div class="section-divider"></div>
+                </div>
                 <p>ClipCult is a creative space focused on impactful video editing and visual storytelling. From reels and promo videos to cinematic edits, each project is designed to capture attention and deliver emotion through smooth transitions and sharp cuts.</p>
                 <p>Alongside video, ClipCult also delivers bold and clean graphic designs — including posters, banners, and social media visuals — all crafted to stand out and stay on-trend. Every design tells a story, built with creativity and precision.</p>
                 <div class="skills">
                     <h3>My Skills</h3>
                     <div class="skill-tags">
-                        <span>Adobe Premiere Pro</span>
-                        <span>After Effects</span>
-                        <span>Photoshop</span>
-                        <span>Illustrator</span>
-                        <span>Capcut</span>
-                        <span>Branding</span>
-                        <span>Filmmora</span>
-                        <span>Color Grading</span>
+                        <span class="skill-tag">Adobe Premiere Pro</span>
+                        <span class="skill-tag">After Effects</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Illustrator</span>
+                        <span class="skill-tag">Capcut</span>
+                        <span class="skill-tag">Branding</span>
+                        <span class="skill-tag">Filmmora</span>
+                        <span class="skill-tag">Color Grading</span>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="exp-item">
+                        <div class="exp-number" data-count="50">0</div>
+                        <div class="exp-text">Projects Completed</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-number" data-count="25">0</div>
+                        <div class="exp-text">Happy Clients</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-number" data-count="3">0</div>
+                        <div class="exp-text">Years Experience</div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="about-bg-shape"></div>
     </section>
 
-    <!-- Testimonials Section -->
-    <!-- <section class="testimonials">
+    <!-- Ventures Section -->
+    <section class="compact-ventures">
         <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <p>"The promotional video created for our product launch exceeded all expectations. It perfectly captured our brand essence and helped us achieve record sales."</p>
-                    <div class="client-info">
-                        <h4>Sarah Johnson</h4>
-                        <p>Marketing Director, TechCorp</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Other Ventures</h2>
+                <div class="section-subtitle">Creative Ecosystem</div>
+                <div class="section-divider"></div>
+            </div>
+            <div class="compact-slider">
+                <!-- Venture 1 -->
+                <div class="compact-slide active" data-aos="fade-up" data-aos-delay="100">
+                    <div class="compact-card">
+                        <div class="card-header">
+                            <img src="img/vtx.png" alt="vtx">
+                            <h4>VTXON BLAZE</h4>
+                        </div>
+                        <p>VTXon Blaze is our flagship event, blending music, culture, and tech into one unforgettable experience.</p>
+                        <a href="https://vtx-mshakib993s-projects.vercel.app/" target="_blank" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <div class="card-highlight"></div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"Working with this designer was a game-changer for our brand. The visual identity they created has become instantly recognizable in our industry."</p>
-                    <div class="client-info">
-                        <h4>Michael Chen</h4>
-                        <p>CEO, FreshBites</p>
+                <div class="compact-slide active" data-aos="fade-up" data-aos-delay="200">
+                    <div class="compact-card">
+                        <div class="card-header">
+                            <img src="img/phoenix.png" alt="vtx">
+                            <h4>Phoenix</h4>
+                        </div>
+                        <p>Phoenix is a student-led team that organizes tech events, workshops, and cultural activities.</p>
+                        <a href="https://phoenix-organisation.vercel.app/" target="_blank" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <div class="card-highlight"></div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"The social media graphics package delivered consistent, high-quality content that significantly increased our engagement rates."</p>
-                    <div class="client-info">
-                        <h4>Emily Rodriguez</h4>
-                        <p>Social Media Manager</p>
+                <!-- Venture 2 -->
+                <div class="compact-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="compact-card">
+                        <div class="card-header">
+                            <img src="img/HelpHub.png" alt="ReelFactory Icon">
+                            <h4>HelpHub</h4>
+                        </div>
+                        <p>HelpHub – One-stop platform for student support: academic help, second-hand goods, and budget PGs.</p>
+                        <a href="https://help-hub-nf2j.vercel.app/" target="_blank" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <div class="card-highlight"></div>
+                    </div>
+                </div>
+                <!-- Venture 3 -->
+                <div class="compact-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="compact-card">
+                        <div class="card-header">
+                            <img src="img/coming_soon.avif" alt="BrandVFX Icon">
+                            <h4>Coming Soon</h4>
+                        </div>
+                        <p>Stay tuned for our next exciting venture in the creative space!</p>
+                        <a href="#" target="_blank" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <div class="card-highlight"></div>
                     </div>
                 </div>
             </div>
             <div class="slider-controls">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots"></div>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                <button class="prev-venture"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-venture"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-    </section> -->
-<!-- Add this anywhere you want a compact venture display -->
-<section class="compact-ventures">
-    <div class="container">
-        <h3 class="subsection-title">Our Other Ventures</h3>
-        <div class="compact-slider">
-            <!-- Venture 1 -->
-            <div class="compact-slide active">
-                <div class="compact-card">
-                    <div class="card-header">
-                        <img src="img/vtx.png" alt="vtx">
-                        <h4>VTXON BLAZE</h4>
-                    </div>
-                    <p>VTXon Blaze is our flagship event, blending music, culture, and tech into one unforgettable experience.</p>
-                    <a href="https://vtx-mshakib993s-projects.vercel.app/" target="_blank"    class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
-                    <div class="card-highlight"></div>
-                </div>
-            </div>
+    </section>
 
-            <div class="compact-slide active">
-                <div class="compact-card">
-                    <div class="card-header">
-                        <img src="img/phoenix.png" alt="vtx">
-                        <h4>Phoenix</h4>
-                    </div>
-                    <p>Phoenix is a student-led team that organizes tech events, workshops, and cultural activities, aiming to inspire growth, creativity, and leadership among students.</p>
-                    <a href="https://phoenix-organisation.vercel.app/" target="_blank"    class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
-                    <div class="card-highlight"></div>
-                </div>
-            </div>
-
-            <!-- Venture 2 -->
-            <div class="compact-slide">
-                <div class="compact-card">
-                    <div class="card-header">
-                        <img src="img/HelpHub.png" alt="ReelFactory Icon">
-                        <h4>HelpHub</h4>
-                    </div>
-                    <p>HelpHub – One-stop platform for student support: academic help, second-hand goods, and budget PGs.
-                    </p>
-                    <a href="https://help-hub-nf2j.vercel.app/" target="_blank"          class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
-                    <div class="card-highlight"></div>
-                </div>
-            </div>
-
-            <!-- Venture 3 -->
-            <div class="compact-slide">
-                <div class="compact-card">
-                    <div class="card-header">
-                        <img src="img/coming_soon.avif" alt="BrandVFX Icon">
-                        <h4>Coming Soon</h4>
-                    </div>
-                    <p></p>
-                    <a href="#" target="_blank" class="compact-link">Visit Site <i class="fas fa-arrow-right"></i></a>
-                    <div class="card-highlight"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Contact Section
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-subtitle">Let's Create Together</div>
+                <div class="section-divider"></div>
+            </div>
             <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's Create Something Amazing</h3>
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Ready to Start Your Project?</h3>
                     <p>Have a project in mind or want to discuss how I can help your brand? Reach out through any of these channels:</p>
                     <div class="contact-methods">
                         <div class="contact-method">
                             <i class="fas fa-envelope"></i>
-                            <span>contact@designstudio.com</span>
+                            <span>learnsphere152256@gmail.com</span>
                         </div>
                         <div class="contact-method">
                             <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+91 9341837992</span>
                         </div>
                         <div class="contact-method">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Creative District, Design City</span>
+                            <span>Based in India</span>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-vimeo"></i></a>
+                    <div class="contact-social">
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/clipcult1/?hl=en"><i class="fab fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                            <!-- <a href="#"><i class="fab fa-behance"></i></a> -->
+                            <a href="https://www.linkedin.com/in/md-shakib-5a7964250/"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <!-- <form class="contact-form" data-aos="fade-left">
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" required>
+                        <div class="input-highlight"></div>
                     </div>
                     <div class="form-group">
                         <input type="email" placeholder="Your Email" required>
+                        <div class="input-highlight"></div>
                     </div>
                     <div class="form-group">
                         <input type="text" placeholder="Subject">
+                        <div class="input-highlight"></div>
                     </div>
                     <div class="form-group">
                         <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <div class="input-highlight"></div>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                    <button type="submit" class="btn btn-gradient">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form> -->
             </div>
         </div>
-    </section> -->
+        <div class="contact-wave"></div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#" class="logo">Design<span>Studio</span></a>
+                <div class="footer-logo" data-aos="fade-up">
+                    <a href="#" class="logo">Clip<span>Cult</span></a>
                     <p>Creating visual stories that inspire and engage.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/clipcult1/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a> -->
+                        <a href="https://www.linkedin.com/in/md-shakib-5a7964250/"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -329,7 +424,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-services">
+                <div class="footer-services" data-aos="fade-up" data-aos-delay="200">
                     <h3>Services</h3>
                     <ul>
                         <li><a href="#">Video Editing</a></li>
@@ -338,20 +433,101 @@
                         <li><a href="#">Branding</a></li>
                     </ul>
                 </div>
-                <div class="footer-services">
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><a href="#">9341837992</a></li>
-                        <li><a href="#">learnsphere152256@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> 9341837992</li>
+                        <li><i class="fas fa-envelope"></i> learnsphere152256@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 ClipCult. All rights reserved.</p>
+                <div class="back-to-top" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Loader animation
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate navbar on scroll
+        gsap.to(".navbar", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "100px top",
+                toggleClass: {targets: ".navbar", className: "scrolled"}
+            }
+        });
+
+        // Animate skill tags
+        gsap.utils.toArray(".skill-tag").forEach(tag => {
+            gsap.from(tag, {
+                scrollTrigger: {
+                    trigger: tag,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            });
+        });
+
+        // Counter animation for experience numbers
+        const expNumbers = document.querySelectorAll('.exp-number');
+        expNumbers.forEach(number => {
+            const target = parseInt(number.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const animate = () => {
+                current += increment;
+                if (current < target) {
+                    number.textContent = Math.floor(current);
+                    requestAnimationFrame(animate);
+                } else {
+                    number.textContent = target;
+                }
+            };
+            
+            ScrollTrigger.create({
+                trigger: number,
+                start: "top 80%",
+                onEnter: animate
+            });
+        });
+
+        // Back to top button
+        document.getElementById('backToTop').addEventListener('click', () => {
+            gsap.to(window, {duration: 1, scrollTo: 0, ease: "power2.inOut"});
+        });
+    </script>
 </body>
 </html>
